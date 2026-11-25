@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+ <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+ <title>教务智能问答助手 · 王宁作品集</title>
+ <meta name="description" content="从教务知识采编、意图路由到 RAG 检索与评测，了解教务智能问答助手的项目背景、产品过程和落地结果。">
+ <meta name="theme-color" content="#ffffff"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/styles.css"><script src="assets/app.js" defer></script>
+</head>
+<body class="case-page qa-case">
+ <a class="skip-link" href="#main">跳到正文</a><div class="reading-progress" aria-hidden="true"></div>
+ <header class="site-header"><div class="header-inner"><a class="brand" href="index.html" aria-label="王宁作品集首页"><span class="brand-mark">w.</span><span>王宁<span class="brand-divider">/</span><span class="brand-job">产品经理</span></span></a><nav aria-label="主导航"><a href="index.html#work">全部项目</a><a href="index.html#personal-info">关于我</a></nav></div></header>
+ <main id="main" class="case-main">
+  <a href="index.html#work" class="back-link">返回项目</a>
+  <section class="case-hero"><div class="eyebrow">PROJECT CASE · AI 业务应用 / RAG</div><h1>教务智能<br>问答助手<span class="title-dot">.</span></h1><p class="case-deck">把分散的教务规则，整理为可检索、可核对的业务答疑助手。</p><p class="case-persona">王宁 · 产品方案与业务落地<br>知识采编与规则核对、意图与路由设计、RAG 方案、评测与灰度。</p><dl class="case-facts"><div><dt>业务场景</dt><dd>学校教务 · 业务答疑</dd></div><div><dt>我的职责</dt><dd>产品链路与知识体系设计</dd></div><div><dt>项目时间</dt><dd>2026.04—至今</dd></div></dl></section>
+  <div class="case-layout">
+   <aside class="case-index" aria-label="案例目录"><span>CONTENTS</span><nav><a href="#context" class="active">背景与目标</a><a href="#process">方案与过程</a><a href="#validation">评测与迭代</a><a href="#results">项目结果</a></nav></aside>
+   <div class="case-content">
+    <section id="context" class="case-section"><span class="section-number">CONTEXT &amp; GOALS</span><h2>背景与目标</h2><p>教务规则复杂、学校咨询重复。一次答疑需要结合学校、角色、页面、操作步骤及规则中的条件和例外；资料分散时，业务人员需要反复找文档、核对页面和询问熟悉系统的人。</p><p id="goals">项目定位为面向教务业务的智能问答助手，通过知识采编、规则核对和问题路由，建立可检索、可引用、可核对的答疑链路。</p><dl id="pain-points" class="project-brief"><div><dt>业务上下文</dt><dd>相同问题可能因学校、角色或页面而有不同答案，需要补齐上下文，保留适用条件与例外。</dd></div><div><dt>知识可信</dt><dd>页面展示与真实规则存在信息缺口，通过页面实采、前后端代码及文档交叉核对，形成可复用的知识条目。</dd></div><div><dt>处理边界</dt><dd>标准问题优先直答，复杂规则依赖证据；缺少信息先澄清，证据不足不直接生成，越权或高风险问题转人工。</dd></div></dl></section>
+    <section id="process" class="case-section"><span class="section-number">SOLUTION &amp; PROCESS</span><h2>方案与过程</h2><p>我负责知识采编与规则核对、意图与路由设计、RAG 产品链路及评测灰度方案；模型、检索和工具接入的技术实现，与研发团队共同评审和推进。</p><h3 id="architecture" class="outcome-title">知识与问答流程</h3><div class="case-overview"><div class="case-overview-copy"><section><h4>知识采编</h4><p>用智能体辅助页面实采，记录菜单、操作和截图，结合前后端代码核对规则；按流程、功能、规则与异常分类，切片时保留完整的适用条件和例外。</p></section><section><h4>问题分流与检索生成</h4><p>问题经预处理与语义验证，结合意图、置信度和学校、角色、页面上下文选择 FAQ、知识检索、工具或人工路径。多路召回经融合重排与相关性门禁后，生成带引用的答案并核对引用与幻觉。</p></section><section><h4>工具与人工边界</h4><p>方案明确任务规划、工具调用和观察循环：写操作先审批，循环最多 5 步，失败降级。低置信先澄清，高风险或无法确认的问题交由人工；具体参数见流程图。</p></section></div><figure class="case-process knowledge-flow"><figcaption>知识问答助手方案流程</figcaption><a class="knowledge-flow-preview" href="assets/academic-assistant-flow.png?v=20261125-2" target="_blank" rel="noopener" aria-label="知识问答流程图预览，可上下滚动，点击查看完整图" title="可上下滚动，点击查看完整图"><img src="assets/academic-assistant-flow.png?v=20261125-2" alt="问题经过预处理和语义验证，路由到 FAQ、RAG、工具任务或人工兜底；RAG 通过召回、重排和相关性门禁后生成带引用的回答，工具任务保留审批和有界循环。" loading="lazy" decoding="async"></a><a href="assets/academic-assistant-flow.png?v=20261125-2" target="_blank" rel="noopener">查看完整流程图</a></figure></div></section>
+    <section id="validation" class="case-section"><span class="section-number">EVALUATION & ITERATION</span><h2>评测与迭代</h2><p>使用黄金集与 badcase 集回放，检查召回、引用、拒答、越权及人工兜底。按知识缺失、切片、Query 改写、召回、重排、生成、路由和权限流程定位问题，修复后回归并灰度。</p><div class="evaluation-table"><table><caption>评测与回归关注点</caption><thead><tr><th scope="col">维度</th><th scope="col">关注内容</th><th scope="col">已有依据</th></tr></thead><tbody><tr><th scope="row">规则与上下文</th><td>适用学校、角色、页面、条件与例外是否完整。</td><td>页面实采、代码核对与知识条目。</td></tr><tr><th scope="row">检索与引用</th><td>召回是否相关，回答是否有依据，引用与结论是否一致。</td><td>黄金集与 badcase 集回放。</td></tr><tr><th scope="row">拒答与兜底</th><td>证据不足、越权或高风险问题能否进入澄清和人工路径。</td><td>拒答、权限与人工兜底用例。</td></tr><tr><th scope="row">修复与灰度</th><td>定位问题后修复，核对已有问题是否回归，以及是否引入新的错误。</td><td>修复后的回归检查与灰度反馈。</td></tr></tbody></table></div></section>
+    <section id="results" class="case-section"><span class="section-number">PROJECT OUTCOMES</span><h2>项目结果</h2><div class="results-grid"><div><span>覆盖学校</span><strong>60<span>所</span></strong><p>业务答疑的学校覆盖范围。</p></div><div><span>问答准确度</span><strong>92%</strong><p>衡量业务答疑的回答质量。</p></div><div><span>已落地场景</span><strong>业务答疑</strong><p>基于知识库提供教务业务支持。</p></div></div><p>已支持基于知识库的业务答疑，并为系统迭代保留页面和规则上下文。</p><p class="scope-note"><strong>后续规划：</strong>扩展自然语言规则配置、失败诊断与方案调整等 Agent 能力，持续关注人工兜底率与单次成本。</p></section>
+   </div>
+  </div>
+  <div class="case-end"><a class="button button-dark" href="index.html#work">返回全部项目</a></div>
+ </main>
+ <footer class="site-footer"><div><span class="brand-mark">w.</span><span>王宁 · 产品项目作品集</span></div><a href="#main">回到顶部</a><span>© 2026 WANG NING</span></footer>
+</body>
+</html>
