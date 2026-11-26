@@ -37,3 +37,20 @@
 
 .merged-flow .cover-caption{align-items:center;gap:18px}.merged-flow .cover-caption h2{font-size:22px;font-weight:500;letter-spacing:-.5px;color:var(--ink)}.merged-flow .cover-caption>span{font-size:14px}.merged-flow .cover-flow{align-items:stretch;padding:26px 0 24px}.merged-flow .cover-flow>b{align-self:center}.merged-flow .cover-flow>div{padding:20px 15px;text-align:left}.merged-flow .cover-flow h3{font-size:16px;line-height:1.5}.merged-flow .cover-flow ul{margin:12px 0 0;padding-left:18px;font-size:14px;line-height:1.9;color:#68748b}.cover-roles{display:grid;grid-template-columns:1.3fr 1fr;gap:24px;border-top:1px solid #dbe1f1;padding-top:18px}.cover-roles h3{font-size:14px;font-weight:500;color:#41516f;margin-bottom:7px}.cover-roles p{font-size:14px;line-height:1.9;color:#697791}.home-contact>div{max-width:860px}
 @media(max-width:600px){.merged-flow .cover-caption{align-items:flex-start;flex-direction:column;gap:8px}.merged-flow .cover-flow>div{padding:16px 12px}.cover-roles{grid-template-columns:1fr;gap:16px}}
+
+.homepage-case-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 12px;
+  margin: 10px 0;
+}
+
+.homepage-case-header .homepage-case-title h3 {
+  margin: 0;
+}
+
+.home-button.prototype-link {
+  padding: 5px 11px;
+  color: #4965b8;
+}
