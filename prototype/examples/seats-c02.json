@@ -1,0 +1,12 @@
+{
+  "campusId": "C02",
+  "fiscalYear": "目标财年",
+  "quarter": "暑假",
+  "sourceFile": "班级报名台账.xlsx",
+  "sourceSheet": "班级明细",
+  "classes": [
+    {"name": "科目A01班", "capacity": 16, "enrolled": 12},
+    {"name": "科目B01班", "capacity": 16, "enrolled": 16},
+    {"name": "科目C01班", "capacity": 16, "enrolled": 10}
+  ]
+}
