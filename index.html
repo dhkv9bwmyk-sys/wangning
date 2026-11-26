@@ -5,7 +5,7 @@
  <title>王宁 · 产品经理作品集</title>
  <meta name="description" content="王宁的产品项目作品集，展示业务调研、规则抽象、数据分析、AI业务应用和产品落地过程。">
  <meta name="theme-color" content="#f4f5f7"><meta property="og:title" content="王宁 · 产品经理作品集"><meta property="og:description" content="从业务问题、产品设计到效果验证，了解我的项目与工作方式。">
- <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/styles.css"><script src="assets/app.js" defer></script>
+ <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="assets/styles.css?v=20261126"><script src="assets/app.js" defer></script>
 </head>
 <body class="portfolio-home">
  <a class="skip-link" href="#main">跳到正文</a>
@@ -43,7 +43,7 @@
     <button id="project-tab-data-compass" type="button" role="tab" aria-selected="false" aria-controls="project-panel-data-compass" tabindex="-1">内部店铺数据罗盘</button>
    </div>
    <article id="project-panel-smart-class" class="homepage-case" role="tabpanel" aria-labelledby="project-tab-smart-class" tabindex="0">
-    <header class="homepage-case-header"><div><span class="eyebrow">业务系统 / 运筹求解 + AI · 2025.03—至今</span><h3>智能设班与排课系统</h3><p>用运筹求解承接排课规则，用 AI 整理输入资料，保留业务确认。</p></div><a class="home-button home-button-primary" href="smart-class.html">阅读完整案例</a></header>
+    <header class="homepage-case-header"><div><span class="eyebrow">业务系统 / 运筹求解 + AI · 2025.03—至今</span><div class="homepage-case-title"><h3>智能设班与排课系统</h3><a class="home-button prototype-link" href="prototype/#schedule" target="_blank" rel="noopener" aria-label="体验智能设班原型（在新标签页打开）">体验原型</a></div><p>用运筹求解承接排课规则，用 AI 整理输入资料，保留业务确认。</p></div><a class="home-button home-button-primary" href="smart-class.html">阅读完整案例</a></header>
     <dl class="homepage-results"><div><dt>学校反馈的出表周期</dt><dd class="time-result"><strong>约 1 个月</strong><span>缩短至</span><strong>2 个工作日</strong></dd></div><div><dt>FY26 学校覆盖</dt><dd>85%</dd></div><div><dt>累计支持新班</dt><dd>13,241<span>个</span></dd></div></dl>
     <p class="results-source">效率数据来自学校反馈，观察范围为资源盘点至正式课表输出。</p>
     <div class="case-overview">
@@ -54,7 +54,7 @@
     <footer class="homepage-case-footer"><p>我的工作：业务调研 · 规则与流程设计 · AI 边界设计 · 方案验证与推广</p><a href="smart-class.html#evaluation">查看效果评估与成果</a></footer>
    </article>
    <article id="project-panel-academic-assistant" class="homepage-case" role="tabpanel" aria-labelledby="project-tab-academic-assistant" tabindex="0" hidden>
-    <header class="homepage-case-header"><div><span class="eyebrow">AI 业务应用 / RAG · 2026.04—至今</span><h3>教务智能问答助手</h3><p>将分散的页面、流程与规则整理为可检索、可核对的答疑助手。</p></div><a class="home-button home-button-primary" href="academic-assistant.html">阅读完整案例</a></header>
+    <header class="homepage-case-header"><div><span class="eyebrow">AI 业务应用 / RAG · 2026.04—至今</span><div class="homepage-case-title"><h3>教务智能问答助手</h3><a class="home-button prototype-link" href="prototype/#qa" target="_blank" rel="noopener" aria-label="体验教务智能问答原型（在新标签页打开）">体验原型</a></div><p>将分散的页面、流程与规则整理为可检索、可核对的答疑助手。</p></div><a class="home-button home-button-primary" href="academic-assistant.html">阅读完整案例</a></header>
     <dl class="homepage-results"><div><dt>覆盖学校</dt><dd>60<span>所</span></dd></div><div><dt>问答准确度</dt><dd>92%</dd></div><div><dt>已落地场景</dt><dd class="text-result">业务答疑</dd></div></dl>
     <div class="case-overview"><div class="case-overview-copy"><section><h4>背景与目标</h4><p>教务咨询重复，答案依赖页面、角色和规则上下文。以可信业务答疑为切口，低置信或越权问题保留澄清与人工兜底。</p></section><section><h4>关键设计</h4><p>通过页面实采和前后端代码核对规则，按流程、功能、规则与异常分类。设计 FAQ 直答、RAG 生成、工具调用与人工兜底路由，按意图和置信度分流。</p></section><section><h4>上线验证与迭代</h4><p>已支持基于知识库的业务答疑。用黄金集与 badcase 集回放，定位知识、切片、召回、生成及权限问题，修复后回归并灰度。</p></section></div><figure class="case-process knowledge-flow"><figcaption>知识问答助手方案流程</figcaption><a class="knowledge-flow-preview" href="assets/academic-assistant-flow.png?v=20261125-2" target="_blank" rel="noopener" aria-label="知识问答流程图预览，可上下滚动，点击查看完整图" title="可上下滚动，点击查看完整图"><img src="assets/academic-assistant-flow.png?v=20261125-2" alt="问题输入经预处理和语义验证，路由到 FAQ 直答、RAG 检索、工具任务或人工兜底；检索结果经过相关性门禁、上下文组装、生成及校验输出，工具任务支持审批与有界循环。" loading="lazy" decoding="async"></a><a href="assets/academic-assistant-flow.png?v=20261125-2" target="_blank" rel="noopener">查看完整流程图</a></figure></div>
     <details class="case-notes" open><summary>RAG 设计与上线范围</summary><div><section><h4>知识与检索设计</h4><p>按标题和规则条目切片，保持条件与例外完整。多路召回后粗排、精排，再做相关性门槛和上下文压缩；高置信 FAQ 使用缓存，控制生成调用与上下文成本。</p></section><section><h4>评测与问题归因</h4><p>关注召回、引用、拒答、越权和人工兜底。按知识缺失、切片、Query 改写、召回、重排、生成幻觉、意图路由及权限流程归因，修复后加入回归集。</p></section><section><h4>上线范围与后续</h4><p>当前落地场景为业务答疑；自然语言规则配置、失败诊断及方案调整属于后续 Agent 能力规划。</p></section></div></details>
