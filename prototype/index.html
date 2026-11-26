@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f7f6f0">
+  <meta name="description" content="在同一个教务工作区查规则、核对设班资料和查看导入结果。">
+  <title>教务工作台</title>
+  <link rel="stylesheet" href="styles.css?v=setup-upload-1124">
+</head>
+<body>
+<div class="app" id="app">
+  <aside id="sidebar" aria-label="工作台导航">
+    <a class="brand" href="#qa" data-act="home">
+      <span class="brandmark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="brand-label"><span>教务工作台</span><small>机构 A</small></span>
+    </a>
+    <button id="sidebar-create" class="new-chat" type="button" data-act="new-chat"><i data-ico="plus"></i>新对话</button>
+    <nav id="nav" aria-label="教务工具"></nav>
+    <div id="sidebar-list-title" class="side-title">会话</div>
+    <div id="sessions" role="region" aria-labelledby="sidebar-list-title"></div>
+  </aside>
+  <div class="body">
+    <header class="top">
+      <div class="breadcrumbs">
+        <button class="icon sidebar-toggle" data-act="menu" aria-label="切换工作台侧栏"><i data-ico="sidebar"></i></button>
+        <b id="crumb">新对话</b>
+      </div>
+      <div class="top-actions">
+        <button id="workspace-toggle" class="btn quiet" data-act="workspace" aria-controls="workspace" aria-expanded="false" hidden><i data-ico="pane"></i><span>工作区</span></button>
+        <span class="avatar" title="当前账号 · 教务管理员" aria-label="当前账号 · 教务管理员">教</span>
+      </div>
+    </header>
+    <div class="deck" id="deck">
+      <main id="view" tabindex="-1"><p class="loading" role="status">正在读取工作台…</p></main>
+      <div id="course-planner-view" hidden></div>
+      <section id="workspace" aria-labelledby="workspace-title" hidden>
+        <header class="workspace-head">
+          <div class="grow"><span id="workspace-meta" class="meta"></span><h2 id="workspace-title">工作区</h2></div>
+          <button class="icon expand-pane" data-act="expand-workspace" aria-label="扩展工作区"><i data-ico="expand"></i></button>
+          <button class="icon" data-act="close-workspace" aria-label="收起工作区"><i data-ico="x"></i></button>
+        </header>
+        <nav id="workspace-tabs" aria-label="设班核对步骤" hidden></nav>
+        <div id="workspace-scroll"><div id="workspace-alert" class="alert" role="alert" hidden></div><div id="workspace-body"></div></div>
+        <footer id="workspace-foot" hidden></footer>
+      </section>
+    </div>
+  </div>
+</div>
+<div id="session-menu" class="session-menu" hidden>
+  <button type="button" data-act="delete-chat"><i data-ico="trash"></i>删除会话</button>
+</div>
+<dialog id="panel" aria-labelledby="panel-title">
+  <div class="dialog-head">
+    <div><div id="panel-meta" class="sub"></div><h2 id="panel-title"></h2></div>
+    <button class="icon" data-act="close" aria-label="关闭窗口"><i data-ico="x"></i></button>
+  </div>
+  <div id="panel-body"></div>
+  <div id="panel-foot"></div>
+</dialog>
+<div id="toast" role="status" hidden></div>
+<script src="vendor/xlsx.full.min.js"></script>
+<script src="vendor/fflate.min.js"></script>
+<script src="workflow-core.js?v=product-review-1118"></script>
+<script src="import-core.js?v=multi-excel-1120"></script>
+<script src="task-engine.js?v=task-controls-1123"></script>
+<script src="records.js?v=setup-task-start-1123"></script>
+<script src="intent.js?v=setup-upload-1124"></script>
+<script src="semantics.js?v=semantic-input-1119"></script>
+<script src="attachment-rules.js?v=qa-file-citations-1120"></script>
+<script src="seat-lookup.js?v=qa-file-citations-1120"></script>
+<script src="knowledge-engine.js?v=setup-upload-1124"></script>
+<script src="ui.js?v=prep-ready-1124"></script>
+<script src="fulltime-tasks.js?v=task-controls-1123"></script>
+<script src="prototypes.js?v=task-controls-1123"></script>
+<script src="task-view.js?v=prep-ready-1124"></script>
+<script src="services.js?v=workbench-navigation-1123"></script>
+<script src="app.js?v=prep-ready-1124"></script>
+</body>
+</html>
