@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="校区课表，支持开班前四节点核查、所有科目调时、合班联动试排、完整课次冲突核查与保存。">
+  <meta name="theme-color" content="#007c71">
+  <title>教务排课 · 套班联动工作台</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%2300978a'/%3E%3Cpath d='M10 10h7v7h-7zm13 0h7v7h-7zm-13 13h7v7h-7z' fill='white'/%3E%3Cpath d='M23 23h7v7h-7z' fill='%23f48d30'/%3E%3C/svg%3E">
+  <link rel="preload" href="./demo-data.json" as="fetch" crossorigin>
+  <link rel="modulepreload" href="./domain.js">
+  <link rel="modulepreload" href="./workspace.js">
+  <link rel="modulepreload" href="./planner.js">
+  <link rel="modulepreload" href="./recommendations.js">
+  <link rel="modulepreload" href="./stats-ui.js">
+  <link rel="modulepreload" href="./review-ui.js">
+  <link rel="modulepreload" href="./conflict-view.js">
+  <link rel="modulepreload" href="./campus-search.js">
+  <link rel="modulepreload" href="./teaching-stats.js">
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    .site-header { position: sticky; top: 0; z-index: 8; padding-inline-start: 50px; }
+  </style>
+  <script type="module" src="./app.js?v=planner-load-1123"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="教务排课首页"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><strong>教务排课</strong></a>
+    <span class="header-section">课表管理</span>
+    <span id="current-operator" class="current-operator" aria-label="当前演示操作人"></span>
+    <span class="environment-badge">演示数据</span>
+  </header>
+  <main id="app" class="app-shell" aria-busy="true"><div class="initial-loading"><span class="spinner"></span>正在读取课表</div></main>
+  <div id="overlay-root"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="drag-hint" class="drag-hint" role="status"></div>
+  <noscript><p class="noscript">请启用 JavaScript 以使用课表试排。</p></noscript>
+</body>
+</html>
